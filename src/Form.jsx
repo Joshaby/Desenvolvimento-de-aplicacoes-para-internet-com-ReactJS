@@ -18,7 +18,7 @@ class App1 extends Component {
     }
 
     showNome(e) {
-        alert("Seu nome é ", this.state.nome);
+        alert("Seu nome é " + this.state.nome);
         e.preventDefault();
     }
 
