@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import App from './App';
 import Counter from './Counter';
+import { Table } from './fetch/Table';
 import Form from './Form';
 import Form1 from './Form1';
 import { reducer } from './redux/reducers';
@@ -22,6 +23,8 @@ const store = createStore(
 //     document.getElementById('root')
 // );
 
-ReactDOM.render(<Provider store={store}>
-    <Counter />
-</Provider>, document.getElementById('root'));
+// ReactDOM.render(<Provider store={store}>
+//     <Counter />
+// </Provider>, document.getElementById('root'));
+
+ReactDOM.render(<Table />, document.getElementById('root'));
