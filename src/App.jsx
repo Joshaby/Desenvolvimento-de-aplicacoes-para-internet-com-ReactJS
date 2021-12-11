@@ -4,12 +4,18 @@ const ShowFruits = () => {
 
     const [items, setItems] = useState(['Banaca', "Laranja", "Melancia"]);
 
+    const [test, setTest] = useState('oi');
+
     const addItem = (item) => {
         setItems([...items, item]);
     }
 
     const removeItem = () => {
         setItems([...items.slice(0, -1)]);
+    }
+
+    const teste = () => {
+        console.log(test);
     }
 
     return (
@@ -21,6 +27,11 @@ const ShowFruits = () => {
             <br />
             <button onClick={() => addItem('Limão')}>Adicionar limão</button>
             <button onClick={() => removeItem()}>Remover limão</button>
+            <br />
+            <input type="text" value={test} onChange={(e) => {
+                setTest(e.target.value);
+                teste();
+            }} />
         </div>
     );
 }
